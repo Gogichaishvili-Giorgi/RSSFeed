@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RSSFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-Q6-sNX">
+                                <rect key="frame" x="20" y="25" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="utm-G5-NTf"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Currency Rate 2020-12-24" id="lU9-wQ-Xry"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHp-mZ-pEV">
+                                <rect key="frame" x="5" y="95" width="404" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vhT-0h-Uog"/>
+                                </constraints>
+                                <state key="normal" title="NBG Currency"/>
+                                <connections>
+                                    <action selector="didTapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFQ-3g-Fg0"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wED-37-tzA">
+                                <rect key="frame" x="0.0" y="155" width="414" height="658"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hgv-Q6-sNX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="3NC-eC-YyL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wED-37-tzA" secondAttribute="bottom" id="44e-Cv-72W"/>
+                            <constraint firstItem="wED-37-tzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FBd-Gz-NQL"/>
+                            <constraint firstItem="DHp-mZ-pEV" firstAttribute="top" secondItem="Hgv-Q6-sNX" secondAttribute="bottom" constant="30" id="TDL-bg-a0k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DHp-mZ-pEV" secondAttribute="trailing" constant="5" id="ZNH-y9-tcr"/>
+                            <constraint firstItem="wED-37-tzA" firstAttribute="top" secondItem="DHp-mZ-pEV" secondAttribute="bottom" id="fZq-n7-IC7"/>
+                            <constraint firstItem="DHp-mZ-pEV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="rCD-AZ-VP1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hgv-Q6-sNX" secondAttribute="trailing" constant="20" id="rkV-14-jyb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wED-37-tzA" secondAttribute="trailing" id="uhc-WR-tMQ"/>
+                            <constraint firstItem="Hgv-Q6-sNX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y1f-Fk-aQH"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dMZ-Yw-bre"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myNavigationBar" destination="Hgv-Q6-sNX" id="NN6-rl-mZa"/>
+                        <outlet property="webView" destination="wED-37-tzA" id="4rk-59-jOf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
